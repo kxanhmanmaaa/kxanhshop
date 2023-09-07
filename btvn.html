@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .header{
+            padding: 10px;
+            width: auto;
+            height: 50px;
+            background-color: rgb(0, 0, 0);
+            color: yellow;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        #logo{
+            margin-left: 20px;
+            margin-top: 10px;
+            position: fixed; /* Đang bị 3 cái box dưới đè */
+            z-index: 100;
+        }
+        #nnf{
+            margin-top: 2px;
+        }
+        .content{
+            width: auto;
+            height: 50px;
+            background-color: white;
+            padding:0px 0px;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .box1,.box2,.box3{
+            background-color: rgb(246, 215, 42);
+            color: black;
+            padding: 2px 2px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            
+        }
+        .box1:hover,.box2:hover,.box3:hover{
+            background-color: white;      
+            border: 2px solid black; /* Tại sao lại bị mất cái border ở dưới */
+            color: darkgoldenrod;
+            font-weight: bold;
+        }
+        .mid{
+            width: auto;
+            background-color: white;
+            padding:10px 0px;
+            position: relative;
+            display: flex;
+            gap: 5px;
+        }
+        .element{
+            margin-top: 20px;
+            padding-left: 50px;
+            position: relative;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 20px;
+        }
+        #product_name{
+            text-align: justify;
+        }
+        #price{
+            font-style: italic;
+            text-decoration: line-through;
+        }
+        #sale_price{
+            color: red;
+            font-weight: bold;
+            font-size: larger;
+        }
+        .endow{
+            width: 600px;
+            border: 2px dashed rgb(248, 85, 85);
+            background-color: antiquewhite;
+            padding-left: 50px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 20px;
+            line-height: 30px;
+        }
+        .pick_size{
+            position: relative;
+            display: flex;
+            gap: 20px;   /* Muốn đoạn này nó không bị lùi đầu dòng*/
+        }
+        #size1,#size2,#size3,#size4{
+            margin-top: 30px;
+            border: 1px solid gray;
+            width: fit-content;
+            padding: 2px;
+            border-radius: 5px;
+            background-color: lightgrey;
+        }
+        #size1, #size4{
+            text-decoration: line-through;
+        }
+        #size2:hover,#size3:hover{
+            background-color: darkgray;
+            color: white;
+        }   
+        #buy{
+            width: 120px;
+            height: 40px;
+            border-radius: 10px;
+            padding-top: 20px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        #buy:hover{
+            background-color: peachpuff;
+            color: red;
+            border: 2px solid red ;
+        }
+        .shop{
+            line-height: 30px;
+        }
+        a:link{
+            text-decoration: none;
+            color: black;
+        }
+        a:visited{
+            text-decoration: none;
+            color: rgba(236, 40, 96, 0.956);
+        }
+        a:hover{
+            text-decoration: underline;
+            color: palevioletred;
+        }
+        a:active{
+            text-decoration: underline;
+            color: blue;
+        }
+        .feature{
+            margin: 10px 50px 10px 50px;
+            text-align: justify;
+            text-indent: 50px;
+        }
+        h2{
+            text-align: center;
+            color: darkgoldenrod;
+            text-decoration: underline;
+        }
+        table{
+            width: 100%;
+        }
+        table,td,tr{
+            height: 20px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 20px;
+            
+        }
+        #describe{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 20px;
+        }
+        .video{
+            width: auto;
+            background-color: white;
+            padding:10px 0px;
+            position: relative;
+            display: flex;
+            gap: 10px;
+        }
+        video{
+            width: 100%;
+        }
+        h3{
+            text-align: justify;
+            color: rgb(224, 168, 25);
+            text-indent: 20px;
+            font-weight: bold;
+            padding-right: 50px;
+
+        }
+        .footer{
+            background-color: rgb(255, 255, 130);
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 20px;
+            padding-bottom: 30px;
+        }
+        h4{
+            padding-left: 20px;
+            color: black ;
+        }
+    </style>
+</head>
+<body>
+    <img id="logo" src="img/yonex-logo-png-17.png" alt="yonex-logo-png-17" width="50px" height="50px">
+    <div class="header">
+        <p>The world's fastest sport, just got faster.</p>
+    </div>
+    <img id="nnf" src="img/nanoflare1000pc.webp" alt="nanoflare1000pc" width="100%">
+    <div class="content">
+        <div class="box1">
+            <p>Tốc độ</p>
+        </div>
+        <div class="box2">
+            <p>Linh hoạt</p>
+        </div>
+        <div class="box3">
+            <p>Ổn định</p>
+        </div>
+    </div>
+    <div class="mid">
+        <div class="element">
+            <img src="img/p1.webp" width="200px" height="200px">
+            <img src="img/p2.jpg" width="200px" height="200px">
+            <img src="img/p5.webp" width="200px" height="200px">
+        </div>
+        <img id="img_product" src="img/nanoflare-1000-z-1.webp" alt="nanoflare-1000-z-1" width="800px" height="800px">
+        <div class="info">
+            <h1 id="product_name">Siêu phẩm mùa hè: Vợt Cầu Lông Yonex Nanoflare 1000Z Chính Hãng</h1>
+            <p id="tag_price">Giá bán:</p>
+            <p id="price"> 4.500.000 đ</p>
+            <p id="sale_price"> 4.250.000 đ</p>
+            <ul class="endow">
+                <li>Sản phẩm cam kết chính hãng</li>
+                <li>Tặng bao đơn hoặc bao nhung bảo vệ vợt</li>
+                <li>Bảo hành chính hãng theo nhà sản xuất</li>
+                <li>Tặng 02 quấn cán vợt Yonex chính hãng</li>
+                <li>Căng cước miễn phí (Các dòng cước của Yonex)</li>
+                <li>Tặng phiếu voucher giảm giá 10% khi mua các sản phẩm khác tại cửa hàng</li>
+            </ul>
+            <div class="pick_size"> Chọn size:
+                <p id="size1">3U5</p>
+                <p id="size2">3U6</p>
+                <p id="size3">4U5</p>
+                <P id="size4">4U6</P>
+            </div>
+
+            <p id="buy">Mua ngay</p>
+            <p> Hoặc mua trực tiếp tại hệ thống cửa hàng của Kxanhshop:</p>
+            <ul class="shop">
+                <li> <a href="btvn.html"> Kxanhshop Hai Bà Trưng </a> </li>
+                <li> <a href="btvn.html"> Kxanhshop Đống Đa </a> </li>
+                <li> <a href="btvn.html"> Kxanhshop Cổ Nhuế </a> </li>
+            </ul>
+        </div> 
+    </div>
+    <br>
+    <hr>
+    <div class="feature">
+        <h2> MÔ TẢ SẢN PHẨM</h2>
+        <p id="describe"> Vợt Cầu Lông Yonex Nanoflare 1000z là cây vợt sắp được nhà Yonex tung ra thị trường vào giữa tháng 6 này, có thể nói đây là một tin mừng cho những người chơi cầu lông, đặc biệt là những vận động viên thi đấu chuyên nghiệp khi đây chính là dòng cao cấp nhất với hàng loạt cải tiến so với phiên bản Nanoflare 800 trước đó cùng công nghệ hiện đại để cho ra mắt một siêu phẩm mới - Yonex Nanoflare 1000z.</p>
+        <br>
+        <hr>
+        <h2> THÔNG SỐ KĨ THUẬT</h2>
+        <table>
+            <tr>
+                <td>Trình độ chơi</td>
+                <td>Khá Tốt</td>
+            </tr>
+            <tr>
+                <td>Nội dung chơi</td>
+                <td>Đơn và Đôi</td>
+            </tr>
+            <tr>
+                <td>Phong cách chơi</td>
+                <td>Tấn công</td>
+            </tr>
+            <tr>
+                <td>Độ cứng đũa</td>
+                <td>Cứng</td>
+            </tr>
+            <tr>
+                <td>Điểm cân bằng</td>
+                <td>292mm 290(mm)</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Trọng lượng</td>
+                <td >3U:85-89g</td>
+            </tr>
+            <tr>
+                <td >4U:80-84g</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Mức căng</td>
+                <td >3U:21-29lbs</td>
+            </tr>
+            <tr>
+                <td >4U:20-28 lbs</td>
+            </tr>
+        </table>
+        <p id="describe">Yonex Nanoflare 1000z là cây vợt đầu nhẹ đầu tiên được thiết kế cho tốc độ đập được tăng lên đáng kể so với các mẫu nhẹ đầu khác. Tất cả khả năng cơ động mà bạn mong đợi từ NANOFLARE được điện khí hóa với lực đẩy kỉ lục và điểm ngọt tập trung giúp tận dụng tối đa mọi cú đánh để cho ra những pha vung vợt nhanh như sấm chớp và độ chính xác cực kỳ cao</p>
+        <p id="describe">Với phiên bản cao cấp nhất và có thể sẽ là dấu mốc kết thúc cho series Nanoflare này nên nhà Yonex đã ưu ái khi tích hợp hàng loạt công nghệ mới bên cạnh những công nghệ cơ bản độc quyền. Điểm nổi bật nhất ở phiên bản mới này nằm ở thiết kế khung vợt khi Yonex tích hợp hai loại Aero Frame và Compact Frame để cho ra bộ khung AERO COMPACR Frame trên Yonex Nanoflare 1000z giúp lực truyền từ tay người chơi đến cây vợt được diễn ra một cách nhanh chóng khiến đối thủ không kịp trở tay.</p>
+        <p id="describe">Điểm nổi bật thứ hai nằm ở bộ gen của khung khi nhà Yonex tích hợp bộ dãy 4 gen liên tiếp ở các lỗ đan dây thứ 5 đến thứ 8. Bộ gen này được làm từ một vật liệu nguyên liệu cững do nhà Yonex nghiên cứu và phát triển để hạn chế cong vênh cho cây vợt Yonex Nanoflare 1000z.</p>
+        <p id="describe">Màu sắc xanh và đen chủ đạo tượng trưng cho sức mạnh của sấm chớp vô cùng độc đáo và nổi bật. Ngoài ra điểm khác biệt nằm ở phiên bản lần này nằm ở chụp mũ vợt khi EB Cap Plus được trang bị trên Yonex Nanoflare 1000z để hạn chế tối đa độ rung lắc sau mỗi pha đánh cầu trên sân. Bên cạnh đó, đũa vợt ở Nanoflare 1000z có đường kính 6,8mm lớn hơn so với Nanoflare 800 với chỉ 6,6mm. Với sự thay đổi này hứa hẹn sẽ là một ẩn số để người chơi trải nghiệm sự khác biệt.</p>
+        <p id="describe">Với thiết kế head-light, Yonex Nanoflare 1000Z mang lại sự nhẹ nhàng và linh hoạt trong mỗi cú đánh. Trọng lượng nhẹ giúp bạn xoay chuyển vợt một cách nhanh chóng và dễ dàng. Đồng thời, điểm cân bằng ở phía đầu vợt giúp những pha đập cầu nhanh và uy lực. Với cây vợt này, bạn có thể đánh bại đối thủ với những pha cầu nhanh như chớp.
+        <p id="describe">Vợt Cầu Lông Yonex Nanoflare 1000z theo dự kiến sẽ ra mắt lần đầu tiên vào ngày 16 tháng 6 năm 2023, đây có lẽ là thời điểm nhà Yonex kết thúc hành trình phát hành dòng vợt tốc độ Nanoflare để mở ra một chu kì cho dòng sản phẩm mới. Và theo thông tin từ hãng Yonex, 2 VĐV thế giới đại diện sử dụng siểu phẩm mới này gồm có Calorina Marin (Spain) và Lahshya Sen (India). </p>
+    </div>
+    <hr>
+    <br>
+    <div class="video">
+        <img src="img/361859089_645039464323560_2844479103908022163_n.jpg" alt="fastest smash recorded" width="30%" >
+        <div>
+            <h3>Satwiksairaj Rankireddy and Tan Pearly set the new GUINNESS WORLD RECORD with their lightning-fast smashes, powered by the enhanced repulsion of the new NANOFLARE 1000 Z. </h3>
+            <video src="img/SnapSave.io-Badminton Smash GUINNESS WORLD RECORD _ Full Version.mp4"> </video>
+        </div>
+    </div>
+    <hr>
+    <div class="footer">
+        <div> 
+            <h4>Liên hệ với chúng tôi</h4>
+            <ul>
+                <li>Hotline: 0336092916 </li>
+                <li>Email: kxanhmanma@gmail.com</li>
+                <li>Address: 22 ngõ 41 Phố Vọng</li>
+            </ul>
+        </div>
+        <div> 
+            <h4>Hướng dẫn</h4>
+            <ul>
+                <li>Hướng dẫn mua hàng </li>
+                <li>Giao nhận và thanh toán</li>
+                <li>Đổi trả và bảo hành</li>
+                <li>Đăng kí thành viên</li>
+                <li>Tra cứu đơn hàng</li>
+            </ul>
+        </div>
+        <div> 
+            <h4>Chính sách</h4>
+            <ul>
+                <li>Hệ thống tích điểm</li>
+                <li> Chính sách đổi hàng</li>
+                <li>Chính sách bảo hành</li>
+                <li>Chính sách thanh toán</li>
+                <li>Chính sách bảo vệ thông tin cá nhân</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
