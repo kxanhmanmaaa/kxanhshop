@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- 1.Sử dụng vòng lặp for để in ra bảng cửu chương của một số bất kỳ
+        2.Sử dụng vòng lặp do...while để yêu cầu người dùng nhập một số chia hết cho 5
+        3.Sử dụng vòng lặp for để tính tổng các số chia hết cho 3 hoặc 5 trong khoảng từ 1 đến 100
+        4.Sử dụng vòng lặp while để in ra các số nguyên tố nhỏ hơn 50
+        5.Sử dụng vòng lặp while để đếm số lượng chữ cái 'e' trong một chuỗi(ví dụ chuỗi đầu vào  "abcdef")
+        6. Nhập 1 số từ bàn phím, in từ 1-> số đó cho biết số là số chẵn hay lẻ, in ra tổng chẵn và tổng lẻ
+        7. Nhập vào 1 chuỗi, sau đó in ra chuỗi đảo ngược của nó 
+    -->
+    <script>
+        // for(i=1;i<=9;i++){
+        //     for(j=1;j<=9;j++)
+        //     console.log(i*j);
+        // }
+                // for(i=1;i<=100;i++){
+                //     if(i % 3 == 0){
+                //        if( i % 5 == 0){
+                //         document.write(i+=i);
+                //        }
+                //     }
+                // }
+        // var i = parseInt(prompt("nhap mot so chia het cho 5"));
+        // if(i % 5 != 0){
+        //     prompt("nhap sai rôi!")
+        // }
+        // else{
+        //     do{
+        //         alert("nhap dung roi!")
+        //     }
+        //     while(i>0)
+        // }
+
+                // var num=50;
+                // var i=3;
+                // document.write(2);
+                // while(i <= 50){
+                // var count=0;
+                //     for (let index = 1; index <=i; index++) {
+                //         if(i % index ==0){
+                //             count+=1;
+                //         }
+                
+                // }
+                // if(count == 2){
+                // console.log(i+"la so nguyen to"  )
+                // }
+                // count =0;
+                    
+                // i ++;
+                // }
+
+
+        // var m = [ 1,2,5,1,4,1,3,1 ];
+        // var count = 0;
+        //             for(var i = 0; i < m.length; i++){
+        //                 if (m[i] === 1){
+        //                     count ++
+        //                 }
+        //             }
+        //             document.write (count);
+
+                // var str_check = prompt("nhap vao mot chuoi");
+                // var count = 0;
+                // for (let index = 0; index < str_check.length; index++) {
+                //     var getIndex= str_check[index];
+                //     if('e' == getIndex){
+                //         count+=1;
+                //     }
+                    
+                // }
+                // console.log(`e xuat hien :`+ count);
+            
+        var str_check="chuc em sinh nhat vui ve, mau an chong lon som ra truong kiem nhieu tien nhaaaa";
+        var _exist= new Array();
+        var count = 1;
+        for (let index = 0; index < str_check.length; index++) {
+            // neu do dai cua mang = 0 thi push vao ma khong can kiem tra//
+            if(_exist.length == 0){
+                _exist.push(str_check[index]);
+
+            for(let j= index +1; j< str_check.length; j++){
+                
+                if(str_check[index] == str_check[j]){
+                    count +=1;
+                }
+            }
+            console.log(str_check[index]+"------xuat hien so lan la : " + count)
+        }
+        else{
+            let flag = false;
+            _exist.forEach(element =>{
+                if(element == str_check[index]){
+                    flag= true;
+                }
+            });
+            if( flag == false){
+                // neu do dai cua mang != 0 thi kiem tra moi duoc push vao //
+                _exist.push(str_check[index]);
+                for(let j= index +1; j< str_check.length; j++){
+                
+                if(str_check[index] == str_check[j]){
+                    count +=1;
+                }
+            }
+            console.log(str_check[index] + "--------xuat hien so lan la: " + count)
+            }
+        }
+        count +1;
+        }
+            
+            
+    </script> 
+</body>
+</html>

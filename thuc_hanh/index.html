@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>\
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="header" style="background-color: white; position: fixed; width: 100%;">
+            <div class="row">
+
+                <div class="logo-mid col-lg-2">
+                    <div class="">
+                        <a class="" href="#">
+                            <img src="./img/logo/20230719_2Vl6LJgp.webp" alt="" width="83px" height=43px>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">ÁO NAM</a></li>
+                        <li class="active"><a href="#">QUẦN NAM</a></li>
+                        <li class="active"><a href="#">PHỤ KIỆN</a></li>
+                        <li class="active"><a href="#">ALBUM</a></li>
+                        <li class="active"><a href="#">TIN TỨC</a></li>
+                        <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Page 1-1</a></li>
+                                <li><a href="#">Page 1-2</a></li>
+                                <li><a href="#">Page 1-3</a></li>
+                            </ul>
+                        </li> -->
+                        <li><a href="#">Page 2</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+        <a href="">
+            <img src="./img/header/20230905_LDEArqEV.webp" alt="">
+        </a>
+    </div>
+    <div class="title_1">
+        <h2><a href="">Sản phẩm mới</a> </h2>
+    </div>
+    <div class="container-fluid">
+        <div class="owl-carousel owl-theme">
+            <div class="item"><img src="./img/product/20230613_jEqE4tK3D8.jpeg" alt="" width="300px" height="300px">
+            </div>
+            <div class="item"><img src="./img/product/20230713_BA1mrOukgv.jpeg" alt="" width="300px" height="300px">
+            </div>
+            <div class="item"><img src="./img/product/20230713_cN9UPOPmPE.jpeg" alt="" width="300px" height="300px">
+            </div>
+            <div class="item"><img src="./img/product/20230713_I6piX7hbI2.jpeg" alt="" width="300px" height="300px">
+            </div>
+            <div class="item"><img src="./img/product/20230713_kABNGxKT17.jpeg" alt="" width="300px" height="300px">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            })
+        })
+
+    </script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+</body>
+
+</html>
